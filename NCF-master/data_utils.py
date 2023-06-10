@@ -6,25 +6,6 @@ import torch.utils.data as data
 
 import config
 
-
-# from sklearn.model_selection import train_test_split
-
-# def load_all(test_size=0.1):
-#     """ We load all the data here and split it into training and testing sets. """
-#     data = pd.read_csv('u.data', sep='\t', header=None, names=['user', 'item', 'rating', 'timestamp'])
-#     train_data, test_data = train_test_split(data, test_size=test_size, random_state=42)
-
-#     user_num = data['user'].max() + 1
-#     item_num = data['item'].max() + 1
-
-#     # load ratings as a dok matrix
-#     train_mat = sp.dok_matrix((user_num, item_num), dtype=np.float32)
-#     for _, row in train_data.iterrows():
-#         train_mat[row['user'], row['item']] = row['rating']
-
-#     return train_data.values.tolist(), test_data.values.tolist(), user_num, item_num, train_mat
-
-
 def load_all(test_num=100):
 	""" We load all the three file here to save time in each epoch. """
 	train_data = pd.read_csv(

@@ -15,9 +15,6 @@ import config
 import evaluate
 import data_utils
 
-# TODO: remove the args and use config.py instead
-# TODO: chanche the dataset to u.data
-
 parser = argparse.ArgumentParser()
 parser.add_argument("--lr", 
 	type=float, 
